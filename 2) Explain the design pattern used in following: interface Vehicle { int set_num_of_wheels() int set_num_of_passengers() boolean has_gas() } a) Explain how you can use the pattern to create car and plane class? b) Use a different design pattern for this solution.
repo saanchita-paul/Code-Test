@@ -1,0 +1,49 @@
+public class Car implements Vehicle{
+
+    @Override
+    public int set_num_of_wheels() {
+        return 0;
+    }
+
+    @Override
+    public int set_num_of_passengers() {
+        return 0;
+    }
+
+    @Override
+    public boolean has_gas() {
+        return true;
+    }
+
+}
+
+
+
+public class Plane implements Vehicle{
+
+    @Override
+    public int set_num_of_wheels() {
+        return 0;
+    }
+
+    @Override
+    public int set_num_of_passengers() {
+        return 0;
+    }
+
+    @Override
+    public boolean has_gas() {
+        return true;
+    }
+
+}
+
+
+
+
+Polymorphism is just a fancy way to put different function pointers (chosen inconditionally by the concrete class) under a given function name.
+So instead if it had a single class with a hashmap of methodenum-to-somefunctioninterface (method enum would just list the finite set of methods to hookup), then it could call the polymorphic functions by looking them up by the enum in the map, then casting to somefunctioninterface and calling it.
+
+It entirely defeats the purpose of this OOP language, but that would be a distinct implementation.
+
+It would fall into behavioral patterns for sure, but I guess it would be close to a Strategy or Plugin, given it's about delegating to classes incarnating the function.
